@@ -13,7 +13,6 @@ const lodeCategories = () => {
         })
         .catch((err) => (console.log(err)));
 
-
 };
 lodeCategories();
 const displayCategories = (categories) => {
@@ -47,13 +46,16 @@ const lodeTreesByCategories = (id) => {
 };
 
 const displayTrees = (trees) => {
+    AllCategories.addEventListener(("click"), () => {
+        AllProduct.innerHTML=``;
+    });
     trees.forEach(element => {
         AllProduct.innerHTML += `
-                <div class="p-4 rounded-xl shadow-xl">
-                    <img src="${element.image}" alt="" class="w-full bg-[#EDEDED] rounded-2xl">
+                <div class="p-4 rounded-xl shadow-xl object-contain">
+                    <img src="${element.image}" alt="" class="w-full aspect-3/2 object-cover bg-[#EDEDED] rounded-2xl">
                     <div class="my-3">
                         <h1 class="text-sm font-semibold">${element.name}</h1>
-                        <p class="text-[#1F2937] text-xs my-2">${element.description}</p>
+                        <p class="text-[#1F2937] text-xs my-2 text-justify">${element.description}</p>
                         <div class="flex justify-between">
                             <h2 class="text-[#15803D] bg-[#DCFCE7] px-3 py-2 rounded-full">${element.category}</h2>
                             <p class="text-[#1F2937] text-lg font-semibold">৳ ${element.price}</p>
@@ -63,11 +65,4 @@ const displayTrees = (trees) => {
                 </div>
                 `
     });
-    // AllCategories.addEventListener(("click"), (event) => {
-    //     document.querySelectorAll(".active").forEach(active => active.classList.remove("bg-green-500", "text-white"));
-    //     if (event.target.localName === "p") {
-    //         lodeTreesByCategories(event.target.id);
-    //         event.target.classList.add("bg-green-500", "text-white")
-    //     };
-    // });
 };
