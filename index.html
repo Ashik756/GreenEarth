@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
 
@@ -58,25 +59,44 @@
                     class="bg-[#FACC15] rounded-full py-4 px-6 text-[#15803D] cursor-pointer font-medium">Get
                     Involved</button>
             </section>
+
         </div>
 
         <!-- Choose Your Trees -->
-        <h1 class="text-[#1F2937] text-3xl font-semibold mb-5 md:mb-10 inline-block">Choose Your Trees</h1>
-        <section class="max-w-[96%] mx-auto py-10 md:py-20 flex flex-col md:flex-row">
-
+        <div class="max-w-[96%] mx-auto py-5 md:py-10 text-center">
+            <h1 class="text-[#1F2937] text-3xl font-semibold mb-5 md:mb-10">Choose Your Trees</h1>
+        </div>
+        <section class="max-w-[96%] mx-auto py-5 md:py-10 flex flex-col md:flex-row">
             <!-- Categories -->
             <div>
                 <h3 class="font-semibold text-xl">Categories</h3>
-                <div id="Categories" class="shadow-xl min-w-[250px]"></div>
+
+                <ul id="categories" class="shadow-xl min-w-[200px]">
+                    <li id="allTrees" class="font-medium text-lg hover:bg-green-500 cursor-pointer px-2.5 py-2 rounded-lg">All Trees</li>
+                </ul>
             </div>
+
+
+
+
+
+
 
             <!-- show product -->
             <div id="displayTrees" class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-7">
 
             </div>
 
+
+
+
+
+
+
+
+
             <!-- show cart -->
-            <div id="cart" class=""></div>
+
         </section>
 
         <!-- About the Campaign -->
@@ -142,6 +162,7 @@
     </main>
     <footer class="bg-[#14532D] text-center font-semibold text-white py-6">
         <h5>© 2025 Green Earth. All Rights Reserved.</h5>
+        <span class="loading loading-spinner loading-xl hidden bg-green-800"></span>
     </footer>
     <script src="./script.js"></script>
 </body>
