@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- style -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
-
+    <style>
+        * {
+            font-family: "Inter", sans-serif;
+        }
+    </style>
     <!-- icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,7 +62,6 @@
             </section>
 
         </div>
-
         <!-- Choose Your Trees -->
         <div class="max-w-[96%] mx-auto py-5 md:py-10 text-center">
             <h1 class="text-[#1F2937] text-3xl font-semibold mb-5 md:mb-10">Choose Your Trees</h1>
@@ -70,38 +70,28 @@
             <!-- Categories -->
             <div>
                 <h3 class="font-semibold text-xl">Categories</h3>
-
                 <ul id="categories" class="shadow-xl min-w-[200px]">
-                    <li id="allTrees" class="font-medium text-lg hover:bg-green-500 cursor-pointer px-2.5 py-2 rounded-lg">All Trees</li>
+                    <li id="allTrees"
+                        class="font-medium text-lg hover:bg-green-500 bg-green-500 text-white cursor-pointer px-2.5 py-2 rounded-lg">
+                        All Trees</li>
                 </ul>
             </div>
-
-
-
-
-
-
-
             <!-- show product -->
-            <div id="displayTrees" class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-7">
-
-            </div>
-
-
-
-
-
-
-
-
-
+            <div id="displayTrees" class="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-7"></div>
             <!-- show cart -->
-
+            <div class="bg-white shadow-xl min-w-[200px] rounded-lg p-4">
+                <h3 class="font-semibold text-xl my-3">Your Cart</h3>
+                <div id="cart"></div>
+                <hr>
+                <div class="flex justify-between my-2.5 mx-3 text-[#1F2937]">
+                    <p>Total :</p>
+                    <p>৳<span id="cartTotalPrice">0</span></p>
+                </div>
+            </div>
         </section>
-
         <!-- About the Campaign -->
-        <section class="max-w-[80%] md:max-w-[50%] mx-auto py-10 md:py-20">
-            <h1 class="text-[#1F2937] text-3xl font-semibold text-center mb-5 md:mb-10 inline-block">About the Campaign
+        <section class="max-w-[80%] md:max-w-[50%] mx-auto py-10 md:py-20 text-center">
+            <h1 class="text-[#1F2937] text-3xl font-semibold mb-5 md:mb-10">About the Campaign
             </h1>
             <div class="flex flex-col lg:flex-row md:items-center md:gap-7">
                 <div class="md:basis-1/2">
@@ -119,28 +109,26 @@
                 </div>
             </div>
         </section>
-
         <!-- Our Impact -->
         <section class="bg-[#CFF0DC] py-10 md:py-20">
             <div class="max-w-[90%] mx-auto text-center grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                 <h1 class="text-[#1F2937] text-3xl font-semibold md:col-span-3">Our Impact</h1>
-                <div class="bg-white p-10 rounded-xl shadow-xl">
+                <div class="bg-white p-10 rounded-xl shadow-xl hover:shadow-2xl hover:bg-green-200 transition-all duration-500 cursor-pointer">
                     <h3 class="text-[#15803D] text-3xl font-semibold">500K+</h3>
                     <p class="text-[#1F2937]">Trees Planted</p>
                 </div>
 
-                <div class="bg-white p-10 rounded-xl shadow-xl">
+                <div class="bg-white p-10 rounded-xl shadow-xl hover:shadow-2xl hover:bg-green-200 transition-all duration-500 cursor-pointer">
                     <h3 class="text-[#15803D] text-3xl font-semibold">120+</h3>
                     <p class="text-[#1F2937]">Communities Involved</p>
                 </div>
 
-                <div class="bg-white p-10 rounded-xl shadow-xl">
+                <div class="bg-white p-10 rounded-xl shadow-xl hover:shadow-2xl hover:bg-green-200 transition-all duration-500 cursor-pointer">
                     <h3 class="text-[#15803D] text-3xl font-semibold">30+</h3>
                     <p class="text-[#1F2937]">Countries Reached</p>
                 </div>
             </div>
         </section>
-
         <!-- Plant a Tree Today -->
         <section class="bg-[#166534] text-center py-10 md:py-20">
             <h1 class="text-3xl font-semibold text-white mb-5 md:mb-10">Plant a Tree Today</h1>
